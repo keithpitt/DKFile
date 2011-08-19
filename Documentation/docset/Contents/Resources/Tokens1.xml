@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DKFile.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DKFile</TokenIdentifier>
+			<Abstract>NSFileManager wrapper that makes it easy to work with files</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DKFile/path</TokenIdentifier>
+			<Abstract>Path to the file</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DKFile/fileFromDocuments:</TokenIdentifier>
+			<Abstract>Returns autoreleased instance of the class data with the document specified</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>+ (id)fileFromDocuments:(NSString *)name</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract>The path to the file within the documents folder</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>Returns initialized object.</Abstract></ReturnValue>
+			<Anchor>//api/name/fileFromDocuments:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DKFile/fileFromBundle:pathForResource:ofType:</TokenIdentifier>
+			<Abstract>Returns autoreleased instance of the class data with the file specified from the bundle</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>+ (id)fileFromBundle:(NSBundle *)bundle pathForResource:(NSString *)path ofType:(NSString *)type</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>bundle</Name>
+					<Abstract>Bundle to use. Passing nil will make it default to [NSBundle mainBundle]</Abstract>
+				</Parameter><Parameter>
+					<Name>path</Name>
+					<Abstract>The path to the file (minus the extension)</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract>The extension of the file</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>Returns initialized object.</Abstract></ReturnValue>
+			<Anchor>//api/name/fileFromBundle:pathForResource:ofType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DKFile/jsonFromBundle:pathForResource:</TokenIdentifier>
+			<Abstract>Shortcut method to read JSON from the file system</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>+ (id)jsonFromBundle:(NSBundle *)bundle pathForResource:(NSString *)path</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>bundle</Name>
+					<Abstract>Bundle to use. Passing nil will make it default to [NSBundle mainBundle]</Abstract>
+				</Parameter><Parameter>
+					<Name>path</Name>
+					<Abstract>The path to the file (minus the extension). A "json" extension is assumed.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>Returns the JSON object</Abstract></ReturnValue>
+			<Anchor>//api/name/jsonFromBundle:pathForResource:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DKFile/initWithPath:</TokenIdentifier>
+			<Abstract>Initializes the class with the path provided</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithPath:(NSString *)filePath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract>Path to the file on the filesystem</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>Returns initialized object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DKFile/contents</TokenIdentifier>
+			<Abstract>File contents</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)contents</Declaration>
+			
+			<ReturnValue><Abstract>Returns the contents of the file</Abstract></ReturnValue>
+			<Anchor>//api/name/contents</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DKFile/exists</TokenIdentifier>
+			<Abstract>File existance</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)exists</Declaration>
+			
+			<ReturnValue><Abstract>Returns whether or not the file exists on the filesystem</Abstract></ReturnValue>
+			<Anchor>//api/name/exists</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DKFile/size</TokenIdentifier>
+			<Abstract>File size</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>- (NSInteger)size</Declaration>
+			
+			<ReturnValue><Abstract>Returns the size of the file on disk</Abstract></ReturnValue>
+			<Anchor>//api/name/size</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DKFile/lastModificationDate</TokenIdentifier>
+			<Abstract>File modification date</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>- (NSDate *)lastModificationDate</Declaration>
+			
+			<ReturnValue><Abstract>Returns the date where the file was last modified</Abstract></ReturnValue>
+			<Anchor>//api/name/lastModificationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DKFile/age</TokenIdentifier>
+			<Abstract>File age</Abstract>
+			<DeclaredIn>DKFile.h</DeclaredIn>			
+			
+			<Declaration>- (NSTimeInterval)age</Declaration>
+			
+			<ReturnValue><Abstract>Returns the age of the file</Abstract></ReturnValue>
+			<Anchor>//api/name/age</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

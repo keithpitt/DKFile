@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.discokit.dkfile.DKFile</string>
+	<key>CFBundleName</key>
+	<string>DKFile Documentation</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	
+	
+	
+	
+	<key>DocSetFeedName</key>
+	<string>DKFile Documentation</string>
+	
+	<key>DocSetMinimumXcodeVersion</key>
+	<string>3.0</string>
+	
+	<key>DocSetPublisherIdentifier</key>
+	<string>com.discokit.dkfile.documentation</string>
+	<key>DocSetPublisherName</key>
+	<string>DiscoKit</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2011 DiscoKit. All rights reserved.</string>
+</dict>
+</plist>
