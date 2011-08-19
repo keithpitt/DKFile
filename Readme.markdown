@@ -42,22 +42,22 @@ If you also want to use the `jsonFromBundle:pathForResource:` method, you'll als
     DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
     if ([file exists]) {
-	     NSLog(@"File exists");
-	 } else {
-		  NSLog(@"File DOES NOT exist");
-	 }
+        NSLog(@"File exists");
+    } else {
+        NSLog(@"File DOES NOT exist");
+    }
 
 ### File attributes
 
     DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
     NSLog("File size: %i", [file size]);
-	 NSLog("File modification date: %@", [file lastModificationDate]);
-	 NSLog("File age: %i", [file age]);
+    NSLog("File modification date: %@", [file lastModificationDate]);
+    NSLog("File age: %i", [file age]);
 
 ## Running Specs
 
-To run the specs, open the `DKFile` XCode project, and run the `Specs` target.
+To run the specs, open [DKFile.xcodeproj](https://github.com/keithpitt/DKFile/tree/master/DKFile.xcodeproj) project, and run the `Specs` target.
 
 ## Documentation
 
