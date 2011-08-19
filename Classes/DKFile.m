@@ -69,7 +69,7 @@
     
     // TODO: Come up with a pattern to handle this error.
     if (error) {
-        NSLog(@"%@", error);
+        NSLog(@"%@", [error localizedDescription]);
         abort();
     }
     

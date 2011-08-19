@@ -21,6 +21,9 @@
 		536790EC13FE0FA900FCDF64 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 536790E513FE0FA900FCDF64 /* SBJsonParser.m */; };
 		536790ED13FE0FA900FCDF64 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 536790E713FE0FA900FCDF64 /* SBJsonWriter.m */; };
 		53F6D90313FE12200032D461 /* DKFileSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F6D90213FE12200032D461 /* DKFileSpec.m */; };
+		53F6D90813FE16700032D461 /* stevejobs.png in Resources */ = {isa = PBXBuildFile; fileRef = 53F6D90713FE16700032D461 /* stevejobs.png */; };
+		53F6D90A13FE16DB0032D461 /* JSON File.json in Resources */ = {isa = PBXBuildFile; fileRef = 53F6D90913FE16DB0032D461 /* JSON File.json */; };
+		53F6D90C13FE17E10032D461 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 53F6D90B13FE17E10032D461 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		536790E713FE0FA900FCDF64 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		536790EE13FE10B500FCDF64 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 		53F6D90213FE12200032D461 /* DKFileSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKFileSpec.m; sourceTree = "<group>"; };
+		53F6D90713FE16700032D461 /* stevejobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stevejobs.png; sourceTree = "<group>"; };
+		53F6D90913FE16DB0032D461 /* JSON File.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "JSON File.json"; sourceTree = "<group>"; };
+		53F6D90B13FE17E10032D461 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		536790A913FE0EA300FCDF64 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				53F6D90613FE166F0032D461 /* Resources */,
 				53F6D90413FE12270032D461 /* Support */,
 				53F6D90213FE12200032D461 /* DKFileSpec.m */,
 			);
@@ -198,6 +205,16 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		53F6D90613FE166F0032D461 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53F6D90713FE16700032D461 /* stevejobs.png */,
+				53F6D90913FE16DB0032D461 /* JSON File.json */,
+				53F6D90B13FE17E10032D461 /* README.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F6D90813FE16700032D461 /* stevejobs.png in Resources */,
+				53F6D90A13FE16DB0032D461 /* JSON File.json in Resources */,
+				53F6D90C13FE17E10032D461 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
