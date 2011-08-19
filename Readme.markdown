@@ -12,6 +12,8 @@ If you also want to use the `jsonFromBundle:pathForResource:` method, you'll als
 
 ## Usage
 
+For more documentation, visit http://keithpitt.github.com/DKFile
+
 ### Creating a DKFile from a file from a bundle
 
     // Passing nil uses [NSBundle mainBundle]
