@@ -61,7 +61,7 @@ To run the specs, open [DKFile.xcodeproj](https://github.com/keithpitt/DKFile/tr
 
 ## Documentation
 
-To build the documentation, just run `rake` in the root of the project. You will need [appledoc](http://www.gentlebytes.com/home/appledocapp/) installed, and an environment variable set `APPLEDOC_TEMPLATE_PATH` pointing to the path of your appledoc templates.
+To build the documentation, just run `rake` in the root of the project. You will need [appledoc](http://www.gentlebytes.com/home/appledocapp/) installed, and an environment variable `APPLEDOC_TEMPLATE_PATH` set pointing to the path of your appledoc templates.
 
 ## Libraries Used
 
