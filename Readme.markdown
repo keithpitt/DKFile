@@ -46,7 +46,7 @@ For more documentation, visit http://keithpitt.github.com/DKFile
     else
       NSLog(@"%@", [error localizedDescription]);
 
-### Writing text to the filesystem
+### Writing text to the file system
 
     // Create in instance of DKFile
     DKFile * file = [DKFile fileFromDocuments:@"SomeText.txt"];
