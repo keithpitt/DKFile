@@ -72,7 +72,7 @@ For more documentation, visit http://keithpitt.github.com/DKFile
 
     NSLog("Contents of: %@, %@", file.path, [file contents]);
 
-### File existance
+### File existence
 
     DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
