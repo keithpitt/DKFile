@@ -46,6 +46,21 @@ For more documentation, visit http://keithpitt.github.com/DKFile
     else
       NSLog(@"%@", [error localizedDescription]);
 
+### Writing text to the filesystem
+
+    // Create in instance of DKFile
+    DKFile * file = [DKFile fileFromDocuments:@"SomeText.txt"];
+
+    // Turn the text into data
+    NSData * textData = [@"Cool Story Bro" dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSError * error = nil;
+
+    if ([file writeData:textData error:&error])
+      NSLog(@"File save success!");
+    else
+      NSLog(@"%@", [error localizedDescription]);
+
 ### Loading JSON from the file system
 
     // Will read and parse Users.json from [NSBundle mainBundle]
