@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class DKAPIFormData;
+
 /** NSFileManager wrapper that makes it easy to work with files
  */
 @interface DKFile : NSObject

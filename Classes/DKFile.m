@@ -150,6 +150,18 @@
     
 }
 
+- (id)formData:(id)formData valueForKey:(NSString *)key {
+    
+    return self.path;
+    
+}
+
+- (int)formData:(id)formData dataTypeForKey:(NSString *)key {
+    
+    return 2;
+    
+}
+
 - (void)dealloc {
     
     self.path = nil;
