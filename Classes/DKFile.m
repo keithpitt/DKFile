@@ -181,13 +181,13 @@
     
 }
 
-- (id)formData:(id)formData valueForKey:(NSString *)key {
+- (id)formData:(DKAPIFormData *)formData valueForKey:(NSString *)key {
     
     return self.path;
     
 }
 
-- (int)formData:(id)formData dataTypeForKey:(NSString *)key {
+- (int)formData:(DKAPIFormData *)formData dataTypeForKey:(NSString *)key {
     
     return 2;
     
