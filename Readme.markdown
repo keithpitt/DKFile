@@ -2,7 +2,7 @@
 
 `DKFile` is a wrapper around NSFileManager that provides an easier syntax for working with files.
 
-It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
+It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com) and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
 ## Installation
 
@@ -28,6 +28,39 @@ For more documentation, visit http://keithpitt.github.com/DKFile
     // Passing nil uses [NSBundle mainBundle]
     DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
+### Writing an NSImage to the file system
+
+    // Create in instance of DKFile
+    DKFile * file = [DKFile fileFromDocuments:@"SomeFile.jpg"];
+
+    // Load an image from the bundle
+    NSImage * someImage = [UIImage imageNamed:@"SomeImage"];
+
+    // Turn the image into data with a compression of 90%
+    NSData * imageData = UIImageJPEGRepresentation(someImage, 0.9);
+
+    NSError * error = nil;
+
+    if ([file writeData:imageData error:&error])
+      NSLog(@"File save success!");
+    else
+      NSLog(@"%@", [error localizedDescription]);
+
+### Writing text to the file system
+
+    // Create in instance of DKFile
+    DKFile * file = [DKFile fileFromDocuments:@"SomeText.txt"];
+
+    // Turn the text into data
+    NSData * textData = [@"Cool Story Bro" dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSError * error = nil;
+
+    if ([file writeData:textData error:&error])
+      NSLog(@"File save success!");
+    else
+      NSLog(@"%@", [error localizedDescription]);
+
 ### Loading JSON from the file system
 
     // Will read and parse Users.json from [NSBundle mainBundle]
@@ -39,7 +72,7 @@ For more documentation, visit http://keithpitt.github.com/DKFile
 
     NSLog("Contents of: %@, %@", file.path, [file contents]);
 
-### File existance
+### File existence
 
     DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
@@ -80,6 +113,8 @@ To build the documentation, just run `rake` in the root of the project. You will
 ## Contributers
 
 * [Keith Pitt](http://www.keithpitt.com)
+* [The Frontier Group](http://www.thefrontiergroup.com.au)
+* [Mostly Disco](http://www.mostlydisco.com)
 
 ## License
 

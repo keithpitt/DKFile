@@ -56,6 +56,29 @@
 - (id)initWithPath:(NSString *)filePath;
 
 ///---------------------------------------------------------------------------------------
+/// @name Writing to the file
+///---------------------------------------------------------------------------------------
+
+/** Writes the contents of NSData to the file
+ 
+ @param data Data to write
+ @param error If there is an error writing out the data, upon return contains an NSError object that describes the problem
+ @return YES if the operation succeeds, otherwise NO.
+ */
+- (BOOL)writeData:(NSData *)data error:(NSError **)error;
+
+///---------------------------------------------------------------------------------------
+/// @name Deleting the file
+///---------------------------------------------------------------------------------------
+
+/** Delete the file from the filesystem
+ 
+ @param error If there is an error writing out the data, upon return contains an NSError object that describes the problem
+ @return YES if the operation succeeds, otherwise NO.
+ */
+- (BOOL)delete:(NSError **)error;
+
+///---------------------------------------------------------------------------------------
 /// @name Information about the file
 ///---------------------------------------------------------------------------------------
 

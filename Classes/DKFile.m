@@ -58,6 +58,37 @@
     
 }
 
+- (BOOL)writeData:(NSData *)data error:(NSError **)error {
+    
+    return [data writeToFile:path options:NSDataWritingAtomic error:error];
+    
+}
+
+- (BOOL)delete:(NSError **)error {
+    
+    // Only go to delete if we have the file
+    if ([self exists]) {
+        
+        // Create an instance of the file manager. We don't use the shared
+        // one because its not thread safe.
+        NSFileManager * fileManager = [NSFileManager new];
+        
+        // Delete the file
+        BOOL success = [fileManager removeItemAtPath:path error:error];
+        
+        // Release the file manager
+        [fileManager release];
+        
+        return success;
+        
+    } else {
+        
+        return NO;
+        
+    }
+    
+}
+
 - (NSString *)contents {
     
     NSError * error = nil;
