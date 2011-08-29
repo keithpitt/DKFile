@@ -16,79 +16,97 @@ For more documentation, visit http://keithpitt.github.com/DKFile
 
 ### Creating a DKFile from a file from a bundle
 
-    // Passing nil uses [NSBundle mainBundle]
-    DKFile * file = [DKFile fileFromBundle:nil pathForResource:@"SomeFile" ofType:@"png"];
+```objective-c
+// Passing nil uses [NSBundle mainBundle]
+DKFile * file = [DKFile fileFromBundle:nil pathForResource:@"SomeFile" ofType:@"png"];
+```
 
 ### Creating a DKFile from a file in the Documents folder
 
-    DKFile * file = [DKFile fileFromDocuments:@"SomeFile.png"];
+```objective-c
+DKFile * file = [DKFile fileFromDocuments:@"SomeFile.png"];
+```
 
 ### Creating a DKFile from a file using a specific path
 
-    // Passing nil uses [NSBundle mainBundle]
-    DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
+```objective-c
+// Passing nil uses [NSBundle mainBundle]
+DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
+```
 
 ### Writing an NSImage to the file system
 
-    // Create in instance of DKFile
-    DKFile * file = [DKFile fileFromDocuments:@"SomeFile.jpg"];
+```objective-c
+// Create in instance of DKFile
+DKFile * file = [DKFile fileFromDocuments:@"SomeFile.jpg"];
 
-    // Load an image from the bundle
-    NSImage * someImage = [UIImage imageNamed:@"SomeImage"];
+// Load an image from the bundle
+NSImage * someImage = [UIImage imageNamed:@"SomeImage"];
 
-    // Turn the image into data with a compression of 90%
-    NSData * imageData = UIImageJPEGRepresentation(someImage, 0.9);
+// Turn the image into data with a compression of 90%
+NSData * imageData = UIImageJPEGRepresentation(someImage, 0.9);
 
-    NSError * error = nil;
+NSError * error = nil;
 
-    if ([file writeData:imageData error:&error])
-      NSLog(@"File save success!");
-    else
-      NSLog(@"%@", [error localizedDescription]);
+if ([file writeData:imageData error:&error])
+    NSLog(@"File save success!");
+else
+    NSLog(@"%@", [error localizedDescription]);
+```
 
 ### Writing text to the file system
 
-    // Create in instance of DKFile
-    DKFile * file = [DKFile fileFromDocuments:@"SomeText.txt"];
+```objective-c
+// Create in instance of DKFile
+DKFile * file = [DKFile fileFromDocuments:@"SomeText.txt"];
 
-    // Turn the text into data
-    NSData * textData = [@"Cool Story Bro" dataUsingEncoding:NSUTF8StringEncoding];
+// Turn the text into data
+NSData * textData = [@"Cool Story Bro" dataUsingEncoding:NSUTF8StringEncoding];
 
-    NSError * error = nil;
+NSError * error = nil;
 
-    if ([file writeData:textData error:&error])
-      NSLog(@"File save success!");
-    else
-      NSLog(@"%@", [error localizedDescription]);
+if ([file writeData:textData error:&error])
+    NSLog(@"File save success!");
+else
+    NSLog(@"%@", [error localizedDescription]);
+```
 
 ### Loading JSON from the file system
 
-    // Will read and parse Users.json from [NSBundle mainBundle]
-    NSDictionary * json = [DKFile jsonFromBundle:nil pathForResource:@"Users"];
+```objective-c
+// Will read and parse Users.json from [NSBundle mainBundle]
+NSDictionary * json = [DKFile jsonFromBundle:nil pathForResource:@"Users"];
+```
 
 ### File contents (for text files)
 
-    DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
+```objective-c
+DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
-    NSLog("Contents of: %@, %@", file.path, [file contents]);
+NSLog("Contents of: %@, %@", file.path, [file contents]);
+```
 
 ### File existence
 
-    DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
+```objective-c
+DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
-    if ([file exists]) {
-        NSLog(@"File exists");
-    } else {
-        NSLog(@"File DOES NOT exist");
-    }
+if ([file exists]) {
+    NSLog(@"File exists");
+} else {
+    NSLog(@"File DOES NOT exist");
+}
+```
 
 ### File attributes
 
-    DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
+```objective-c
+DKFile * file = [[DKFile alloc] initWithPath:@"some/random/path.txt"];
 
-    NSLog("File size: %i", [file size]);
-    NSLog("File modification date: %@", [file lastModificationDate]);
-    NSLog("File age: %i", [file age]);
+NSLog("File size: %i", [file size]);
+NSLog("File modification date: %@", [file lastModificationDate]);
+NSLog("File age: %i", [file age]);
+```
 
 ## Running Specs
 
