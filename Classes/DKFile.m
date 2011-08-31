@@ -8,8 +8,6 @@
 
 #import "DKFile.h"
 
-#import "JSON.h"
-
 @implementation DKFile
 
 @synthesize path;
@@ -37,14 +35,6 @@
     
     // Create an autoreleased DKFile
     return [[[self alloc] initWithPath:filePath] autorelease];
-    
-}
-
-+ (id)jsonFromBundle:(NSBundle *)bundle pathForResource:(NSString *)path {
-    
-    DKFile * file = [self fileFromBundle:bundle pathForResource:path ofType:@"json"];
-    
-    return [[file contents] JSONValue];
     
 }
 

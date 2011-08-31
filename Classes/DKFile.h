@@ -38,14 +38,6 @@
  */
 + (id)fileFromBundle:(NSBundle *)bundle pathForResource:(NSString *)path ofType:(NSString *)type;
 
-/** Shortcut method to read JSON from the file system
- 
- @param bundle Bundle to use. Passing `nil` will make it default to `[NSBundle mainBundle]`
- @param path The path to the file (minus the extension). A "json" extension is assumed.
- @return Returns the JSON object
- */
-+ (id)jsonFromBundle:(NSBundle *)bundle pathForResource:(NSString *)path;
-
 /** Initializes the class with the path provided
  
  The path doesn't need to exist - nor is the file read when the class is initialized.
