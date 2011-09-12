@@ -8,7 +8,7 @@ It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com) and
 
 Copy `DKFile.h` and `DKFile.m` into to your project folder, and add them to your Xcode project.
 
-If you also want to use the `jsonFromBundle:pathForResource:` method, you'll also need to include the `JSON` library found in the External folder.
+If you also want to use the `jsonFromBundle:pathForResource:` method, you'll also need to include the `JSONKit` library found in the External folder.
 
 ## Usage
 
@@ -74,6 +74,8 @@ else
 ### Loading JSON from the file system
 
 ```objective-c
+#import "DKFile+JSON.h"
+
 // Will read and parse Users.json from [NSBundle mainBundle]
 NSDictionary * json = [DKFile jsonFromBundle:nil pathForResource:@"Users"];
 ```
@@ -118,7 +120,7 @@ To build the documentation, just run `rake` in the root of the project. You will
 
 ## Libraries Used
 
-* http://code.google.com/p/json-framework
+* https://github.com/johnezang/JSONKit
 * https://github.com/petejkim/expecta
 * https://github.com/pivotal/cedar
 

@@ -9,6 +9,7 @@
 #import "SpecHelper.h"
 
 #import "DKFile.h"
+#import "DKFile+JSON.h"
 
 SPEC_BEGIN(DKFileSpec)
 
