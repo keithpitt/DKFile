@@ -9,6 +9,6 @@ Vendor::Spec.new do |s|
 
   s.source      = "https://github.com/keithpitt/DKFile"
 
-  s.files       = [ "DKFile.h", "DKFile.m" ]
+  s.files       = `git ls-files Classes`.split("\n")
 
 end
