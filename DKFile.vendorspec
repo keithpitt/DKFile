@@ -1,0 +1,14 @@
+Vendor::Spec.new do |s|
+
+  s.name        = "DKFile"
+  s.version     = "0.1"
+
+  s.authors     = "keithpitt"
+  s.email       = "me@keithpitt.com"
+  s.description = "A wrapper around NSFileManager that makes it easy to work with files"
+
+  s.source      = "https://github.com/keithpitt/DKFile"
+
+  s.files       = [ "DKFile.h", "DKFile.m" ]
+
+end
